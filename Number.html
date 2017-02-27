@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number</title>
+</head>
+<body>
+
+
+<!--  Number -->
+
+<input type="text" name="" placeholder="input number" id="shamvu">
+<button type="button" onclick="result();">Click to show number</button>
+<h2 id="PrmNmbrshow"></h2>
+
+<script>
+
+	   function result(){
+		 var Show = document.getElementById("PrmNmbrshow");
+		 var x=document.getElementById("shamvu").value;
+
+     for(var i=1; i<=x ;i++){
+     var isPrime = true;
+     for(var j=2; j<i; j++){
+     if(i%j == 0){
+    isPrime = false;
+    }
+    }
+    if(isPrime == true){
+    Show.innerHTML=i+"<br>";
+    }
+    }
+	  }
+
+</script>
+
+
+</body>
+</html>
