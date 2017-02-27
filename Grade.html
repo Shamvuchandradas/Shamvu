@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resultgrade</title>
+</head>
+<body>
+	<!---
+	91 to 100=A+;
+	81 to 90=A;
+	71 to 80=A-;
+	61 to 70=B;
+	51 to 60=B;
+	41 to 50=D;
+	31 to 40=c;
+	0 to 30=F;
+--->
+
+
+<!-- Result -->
+
+<input type="text" name="" placeholder="input number" id="shamvu">
+<button type="button" onclick="btnClick();">Click to show result</button>
+<h2 id="Show"></h2>
+
+<script>
+	function btnClick(){
+		var a=document.getElementById("shamvu").value;
+		var Show=document.getElementById("Show");
+		var i=0;
+		if (a != "") {
+
+		if (a<=100) {
+		Show.innerHTML="A+";
+		if (a <= 79) {
+		Show.innerHTML="A";
+		if (a <= 69) {
+		Show.innerHTML="A-";
+
+		if (a <= 59) {
+		Show.innerHTML="B";
+	  if(a <= 49){
+		Show.innerHTML="C";
+		if (a <= 39) {
+		Show.innerHTML="D";
+		if (a<= 33) {
+		Show.innerHTML="F";
+		 }
+		 }
+		 }
+		 }
+		 }
+		 }
+		 }
+		 	else {Show.innerHTML="enter maximum 100";}
+		} else {Show.innerHTML="enter a shamvu";}
+	}
+</script>
+
+
+
+
+
+</body>
+</html>
